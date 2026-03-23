@@ -171,7 +171,7 @@ jobs:
       PRODUCT_PLATFORM: "linux"
     steps:
       - name: Fetch sources
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set up Virtual Display
         run: |
@@ -252,10 +252,10 @@ jobs:
 #      PRODUCT_PLATFORM: "macosx"
 #    steps:
 #      - name: Fetch sources
-#        uses: actions/checkout@v5
+#        uses: actions/checkout@v6
 #
 #      - name: Fetch CI/CD resources
-#        uses: actions/checkout@v5
+#        uses: actions/checkout@v6
 #        with:
 #          repository: acromere/canoe
 #          path: .github
@@ -349,10 +349,10 @@ jobs:
 #      PRODUCT_PLATFORM: "windows"
 #    steps:
 #      - name: Fetch sources
-#        uses: actions/checkout@v5
+#        uses: actions/checkout@v6
 #
 #      - name: Fetch CI/CD resources
-#        uses: actions/checkout@v5
+#        uses: actions/checkout@v6
 #        with:
 #          repository: acromere/canoe
 #          path: .github
