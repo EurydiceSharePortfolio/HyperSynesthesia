@@ -3,12 +3,12 @@ import com.dakkra.hypersynesthesia.HyperSynesthesia;
 
 module com.dakkra.hypersynthesthesia {
 	requires static lombok;
+	requires static org.jspecify;
 
 	requires com.acromere.xenon;
 	requires com.github.kokorin.jaffree;
 	requires fft4j;
 	requires org.slf4j;
-	requires org.jspecify;
 	requires javafx.graphics;
 	requires com.acromere.zevra;
 	requires java.desktop;
