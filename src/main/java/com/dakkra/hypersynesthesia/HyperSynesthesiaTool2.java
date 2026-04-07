@@ -2,7 +2,7 @@ package com.dakkra.hypersynesthesia;
 
 import com.acromere.product.Rb;
 import com.acromere.util.FileUtil;
-import com.acromere.xenon.UiFactory;
+import com.acromere.xenon.Ui;
 import com.acromere.xenon.XenonProgramProduct;
 import com.acromere.xenon.notice.Notice;
 import com.acromere.xenon.resource.Resource;
@@ -184,9 +184,7 @@ public class HyperSynesthesiaTool2 extends GuidedTool {
 
 		Task<Void> loadTask = Task.of(
 			"Load Music", () -> {
-				this.music = projectProcessor.loadMusicFile(
-					inputFile.toPath(), progress -> Fx.run( () -> audioProgressBar.setProgress( progress ) )
-				);
+				this.music = projectProcessor.loadMusicFile( inputFile.toPath(), progress -> Fx.run( () -> audioProgressBar.setProgress( progress ) ) );
 
 				Fx.run( () -> this.sourceAudioDuration.setText( formatDuration( music.getDuration() ) ) );
 				Fx.run( () -> this.sampleCount.setText( String.valueOf( music.getNumSamples() ) ) );
@@ -306,7 +304,7 @@ public class HyperSynesthesiaTool2 extends GuidedTool {
 	}
 
 	private TitledPane createAudioSourcePane() {
-		GridPane grid = new GridPane( UiFactory.PAD, UiFactory.PAD );
+		GridPane grid = new GridPane( Ui.PAD, Ui.PAD );
 
 		int row = 0;
 		Label sourceAudioPrompt = new Label( Rb.text( getProduct(), BUNDLE, "source-path-prompt" ) );
@@ -366,7 +364,7 @@ public class HyperSynesthesiaTool2 extends GuidedTool {
 	}
 
 	private TitledPane createVideoPropertiesPane() {
-		GridPane grid = new GridPane( UiFactory.PAD, UiFactory.PAD );
+		GridPane grid = new GridPane( Ui.PAD, Ui.PAD );
 
 		Label widthLabel = new Label( Rb.text( getProduct(), BUNDLE, "video-width-prompt" ) );
 		GridPane.setHgrow( width, javafx.scene.layout.Priority.ALWAYS );
@@ -402,7 +400,7 @@ public class HyperSynesthesiaTool2 extends GuidedTool {
 	}
 
 	private TitledPane createBackgroundOptionsPane() {
-		GridPane grid = new GridPane( UiFactory.PAD, UiFactory.PAD );
+		GridPane grid = new GridPane( Ui.PAD, Ui.PAD );
 
 		Label backgroundPaintPrompt = new Label( Rb.text( getProduct(), BUNDLE, "background-color-prompt" ) );
 		GridPane.setHgrow( backgroundColor, javafx.scene.layout.Priority.ALWAYS );
@@ -432,7 +430,7 @@ public class HyperSynesthesiaTool2 extends GuidedTool {
 	}
 
 	private TitledPane createTargetVideoPane() {
-		GridPane grid = new GridPane( UiFactory.PAD, UiFactory.PAD );
+		GridPane grid = new GridPane( Ui.PAD, Ui.PAD );
 
 		Label outputFormatPrompt = new Label( Rb.text( getProduct(), BUNDLE, "target-format-prompt" ) );
 		GridPane.setHgrow( outputFormat, javafx.scene.layout.Priority.ALWAYS );
@@ -462,7 +460,7 @@ public class HyperSynesthesiaTool2 extends GuidedTool {
 	}
 
 	private TitledPane createBarOptionsPane() {
-		GridPane grid = new GridPane( UiFactory.PAD, UiFactory.PAD );
+		GridPane grid = new GridPane( Ui.PAD, Ui.PAD );
 
 		Label barStylePrompt = new Label( Rb.text( getProduct(), BUNDLE, "bar-style-prompt" ) );
 		GridPane.setHgrow( barStyle, javafx.scene.layout.Priority.ALWAYS );
@@ -485,7 +483,7 @@ public class HyperSynesthesiaTool2 extends GuidedTool {
 	}
 
 	private TitledPane createGenerateVideoPane() {
-		GridPane grid = new GridPane( UiFactory.PAD, UiFactory.PAD );
+		GridPane grid = new GridPane( Ui.PAD, Ui.PAD );
 
 		GridPane.setHgrow( executeButton, javafx.scene.layout.Priority.ALWAYS );
 		executeButton.setMaxWidth( Double.MAX_VALUE );
