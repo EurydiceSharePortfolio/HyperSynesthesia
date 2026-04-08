@@ -141,7 +141,9 @@ public class HyperSynesthesiaTool2 extends GuidedTool {
 		grid.add( createBarOptionsPane(), 1, 2, 1, 1 );
 		grid.add( createGenerateVideoPane(), 0, 3, 2, 1 );
 
-		getChildren().addAll( grid );
+		ScrollPane scrollPane = new ScrollPane( grid );
+
+		getChildren().addAll( scrollPane );
 
 		executeButton.setOnAction( _ -> execute() );
 	}
