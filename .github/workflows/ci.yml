@@ -213,6 +213,13 @@ jobs:
           name: hypersynesthesia-artifacts
           path: target
 
+      # NEXT Modify the artifacts
+      - name: Modify the Xenon jar file
+        run: |
+          cd target
+          mkdir xenon-rebrand
+          unzip -d xenon-rebrand xenon.jar
+
       - name: UI Tests
         run: |
           mvn ${{env.MAVEN_PARMS}} -P testui verify
