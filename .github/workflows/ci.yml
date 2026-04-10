@@ -216,10 +216,10 @@ jobs:
       # NEXT Modify the artifacts
       - name: Modify the Xenon jar file
         run: |
-          cd target
+          cd target/
           mkdir xenon-rebrand
           ls -l
-          unzip -d xenon-rebrand xenon.jar
+          #unzip -d xenon-rebrand xenon.jar
 
       - name: UI Tests
         run: |
