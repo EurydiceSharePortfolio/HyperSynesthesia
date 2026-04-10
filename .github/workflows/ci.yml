@@ -218,6 +218,7 @@ jobs:
         run: |
           cd target
           mkdir xenon-rebrand
+          ls -l
           unzip -d xenon-rebrand xenon.jar
 
       - name: UI Tests
