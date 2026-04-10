@@ -216,9 +216,9 @@ jobs:
       # NEXT Modify the artifacts
       - name: Modify the Xenon jar file
         run: |
-          mkdir ./target/xenon-rebrand
+          mkdir ./target/rebrand
           ls -al ./target
-          #unzip -d ./target/xenon-rebrand target/xenon.jar
+          unzip -d ./target/rebrand target/xenon*.jar
 
       - name: UI Tests
         run: |
