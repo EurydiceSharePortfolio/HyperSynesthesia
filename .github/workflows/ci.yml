@@ -213,12 +213,12 @@ jobs:
           name: hypersynesthesia-artifacts
           path: target
 
-      # NEXT Modify the artifacts
-      - name: Modify the Xenon jar file
-        run: |
-          mkdir ./target/rebrand
-          ls -al ./target
-          unzip -d ./target/rebrand target/xenon*.jar
+#      # NEXT Modify the artifacts
+#      - name: Modify the Xenon jar file
+#        run: |
+#          mkdir ./target/rebrand
+#          ls -al ./target
+#          unzip -d ./target/rebrand target/xenon*.jar
 
       - name: UI Tests
         run: |
@@ -242,12 +242,12 @@ jobs:
       - name: Publish Product Pack
         if: ${{ github.actor != 'dependabot[bot]' }}
         run: |
-          scp -B target/*product.jar ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:${PRODUCT_DEPLOY_PATH}/${PRODUCT_PLATFORM}/program.jar 2>&1
+          scp -B target/*product.jar ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:${PRODUCT_DEPLOY_PATH}/${PRODUCT_PLATFORM}/product.jar 2>&1
 
       - name: Publish Product Card
         if: ${{ github.actor != 'dependabot[bot]' }}
         run: |
-          scp -B target/main/java/META-INF/*.card ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:${PRODUCT_DEPLOY_PATH}/${PRODUCT_PLATFORM}/program.card 2>&1
+          scp -B target/main/java/META-INF/*.card ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:${PRODUCT_DEPLOY_PATH}/${PRODUCT_PLATFORM}/product.card 2>&1
 
 #  macos:
 #    needs: build
