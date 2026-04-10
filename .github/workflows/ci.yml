@@ -213,11 +213,11 @@ jobs:
           name: hypersynesthesia-artifacts
           path: target
 
-#      # NEXT Modify the artifacts
-#      - name: Modify the Xenon jar file
-#        run: |
+      # NEXT Modify the artifacts
+      - name: Modify the Xenon jar file
+        run: |
+          ls -al target
 #          mkdir ./target/rebrand
-#          ls -al ./target
 #          unzip -d ./target/rebrand target/xenon*.jar
 
       - name: UI Tests
