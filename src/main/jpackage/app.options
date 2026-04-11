@@ -8,4 +8,4 @@
 --module-path "${jlink.module.path}"
 --java-options "-Dprism.forceGPU=true"
 --java-options "-Djava.library.path=$APPDIR"
---input "src/main/jpackage/etc"
+--input "target/main/jpackage/etc"
