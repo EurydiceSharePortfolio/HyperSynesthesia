@@ -207,6 +207,7 @@ jobs:
           printf %s "$KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 600 ~/.ssh/id_rsa
 
+      # This only gets the artifacts from the previous job
       - name: Download Artifact
         uses: actions/download-artifact@v8
         with:
@@ -218,7 +219,7 @@ jobs:
         run: |
           ls -al target
 #          mkdir ./target/rebrand
-#          unzip -d ./target/rebrand target/xenon*.jar
+#          unzip -d ./target/product.jar # The hypersynesthesia jar file
 
       - name: UI Tests
         run: |
