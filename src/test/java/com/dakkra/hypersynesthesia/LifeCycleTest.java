@@ -21,7 +21,7 @@ public class LifeCycleTest extends HyperSynesthesiaTest {
 	}
 
 	@Test
-	void testModHasCardInfo() {
+	void testModHasCard() {
 		assertNotNull( getMod().getCard() );
 	}
 
