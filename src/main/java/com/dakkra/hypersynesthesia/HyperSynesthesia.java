@@ -24,6 +24,8 @@ public class HyperSynesthesia extends Module {
 		super.startup();
 		log.atInfo().log( "Initializing HyperSynesthesia");
 
+		// TODO Register an icon to represent a music render project file
+
 		registerAssetType( projectResourceType );
 		ToolRegistration registration = new ToolRegistration( this, HyperSynesthesiaTool2.class);
 		registration.setName( "HyperSynestheisa Tool" );
