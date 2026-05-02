@@ -8,4 +8,5 @@
 --module-path "${jlink.module.path}"
 --java-options "-Dprism.forceGPU=true"
 --java-options "-Djava.library.path=$APPDIR"
+--java-options "--enable-native-access=javafx.graphics"
 --input "target/main/jpackage/etc"

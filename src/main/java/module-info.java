@@ -14,10 +14,10 @@ module com.dakkra.hypersynthesthesia {
 	requires java.desktop;
 
 	exports com.dakkra.hypersynesthesia to com.acromere.xenon;
+	exports com.dakkra.hypersynesthesia.bar to com.acromere.xenon;
 
 	// Public resources
 	opens com.dakkra.hypersynesthesia.bundles;
-	exports com.dakkra.hypersynesthesia.bar to com.acromere.xenon;
 	//opens com.dakkra.hypersynesthesia.settings;
 
 	provides Module with HyperSynesthesia;
