@@ -1,0 +1,28 @@
+[
+	{
+		"internalId": "ltrlhbwmthvhtzzn",
+		"name": "${project.organization.name} Stable",
+		"url": "https://hypersynesthesia.com/download/xenon/market/stable",
+		"icon": "https://hypersynesthesia.com/download/xenon/market/latest/hypersynesthesia/linux/product/icon",
+		"icons": [
+			"provider",
+			"https://www.acromere.com/download/stable/acromere/provider/icon"
+		],
+		"enabled": "true",
+		"removable": "false",
+		"rank": -2
+	},
+	{
+		"internalId": "btlzlsvhwvtzdblv",
+		"name": "${project.organization.name} Latest",
+		"url": "https://hypersynesthesia.com/download/xenon/market/latest",
+		"icon": "https://hypersynesthesia.com/download/xenon/market/latest/hypersynesthesia/linux/product/icon",
+		"icons": [
+			"provider",
+			"https://www.acromere.com/download/stable/acromere/provider/icon"
+		],
+		"enabled": "false",
+		"removable": "false",
+		"rank": -1
+	}
+]

@@ -4,25 +4,47 @@
 	"version": "${project.version}",
 	"timestamp": "${project.timestamp}",
 	"packaging": "mod",
-	"icons": [ "${project.artifactId}", "https://hypersynesthesia.com/download/xenon/market/latest/hypersynesthesia/linux/product/icon" ],
+	"icons": [
+		"${project.artifactId}",
+		"https://hypersynesthesia.com/download/xenon/market/latest/hypersynesthesia/linux/product/icon"
+	],
 	"name": "${project.name}",
 	"provider": "${project.organization.name}",
 	"providerUrl": "${project.organization.url}",
 	"inception": "${project.inceptionYear}",
 	"summary": "A mod to create videos based on audio input",
 	"description": "${project.description}",
-	"copyrightSummary": "(c) 2023 Christopher M. Soderquist",
+	"copyrightSummary": "(c) 2023 Eurydice M. Soderquist",
 	"licenseSummary": "${project.name} is under the GPL v3 license",
 	"javaVersion": "25",
 	"maintainers": [
 		{
-			"name": "Christopher Soderquist",
+			"name": "Eurydice Soderquist",
 			"email": "contact@dakkra.com",
 			"timezone": "MDT",
 			"organization": "Dakkra Studio LLC",
 			"organizationUrl": "https://dakkra.com",
-			"roles": ["Architect", "Developer"]
+			"roles": [
+				"Architect",
+				"Developer"
+			]
+		},
+		{
+			"name": "Mark Soderquist",
+			"email": "mark@soderquist.net",
+			"timezone": "MDT",
+			"roles": [
+				"Developer"
+			]
 		}
 	],
-	"contributors": []
+	"contributors": [],
+	"rebrandClass": "com.dakkra.hypersynesthesia.Rebrand",
+	"moduleClasses": [
+		"com.dakkra.hypersynesthesia.HyperSynesthesia"
+	],
+	"rebrand" : {
+		"splashScreenBackgroundClass" : "com.dakkra.hypersynesthesia.HSLogo",
+		"splashScreenTitleFontSize" : 70
+	}
 }
