@@ -26,7 +26,7 @@ public class HyperSynesthesia extends Module {
 
 		// TODO Register an icon to represent a music render project file
 
-		registerAssetType( projectResourceType );
+		registerResourceType( projectResourceType );
 		ToolRegistration registration = new ToolRegistration( this, HyperSynesthesiaTool2.class);
 		registration.setName( "HyperSynestheisa Tool" );
 		registerTool( projectResourceType, registration );
@@ -38,7 +38,7 @@ public class HyperSynesthesia extends Module {
 		log.atInfo().log( "Closing HyperSynesthesia");
 
 		unregisterTool( projectResourceType, HyperSynesthesiaTool2.class );
-		unregisterAssetType( projectResourceType );
+		unregisterResourceType( projectResourceType );
 	}
 
 	@Override
