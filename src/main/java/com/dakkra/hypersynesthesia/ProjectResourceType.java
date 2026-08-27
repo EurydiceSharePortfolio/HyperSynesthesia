@@ -18,13 +18,13 @@ public class ProjectResourceType extends ResourceType {
 	}
 
 	@Override
-	public boolean assetNew( Xenon program, Resource resource ) throws ResourceException {
+	public boolean resourceNew( Xenon program, Resource resource ) throws ResourceException {
 		// TODO implement default resolution of (screen dimensions) here
-		return super.assetNew( program, resource );
+		return super.resourceNew( program, resource );
 	}
 
 	@Override
-	public boolean assetOpen( Xenon program, Resource resource ) throws ResourceException {
-		return super.assetOpen( program, resource );
+	public boolean resourceOpen( Xenon program, Resource resource ) throws ResourceException {
+		return super.resourceOpen( program, resource );
 	}
 }
